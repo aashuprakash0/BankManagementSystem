@@ -17,7 +17,7 @@ public class SignupOne extends JFrame implements ActionListener{
 		SignupOne() {
 		 
 		 setLayout(null);
-		 //To genarte random no for application
+		 //To generate random no for application
 		 Random ran =new Random();
 		 random = Math.abs(new Random().nextInt(9000) + 1000);
 		 //Application form no 
@@ -231,3 +231,4 @@ public static void main(String[] args) {
 	new SignupOne();
 }
 }
+
