@@ -1,6 +1,6 @@
 package bankmanagementsystem;
 
-import java.awt.*;
+import java.awt.*; 
 import java.util.*;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.*;
@@ -17,7 +17,7 @@ public class SignupOne extends JFrame implements ActionListener{
 		SignupOne() {
 		 
 		 setLayout(null);
-		 //To generate random no for application
+		 //To genarte random no for application
 		 Random ran =new Random();
 		 random = Math.abs(new Random().nextInt(9000) + 1000);
 		 //Application form no 
@@ -219,7 +219,8 @@ public class SignupOne extends JFrame implements ActionListener{
 		            Conn c = new Conn();
 		            String query = "INSERT INTO signup VALUES('" + formno + "','" + name + "','" + fname + "','" + dob + "','" + gender + "','" + email + "','" + marital + "','" + adress + "','" + city + "','" + pin + "','" + state + "')";
 		            c.s.executeUpdate(query);
-		            System.out.println("✅ Data inserted successfully!");
+		            setVisible(false);
+		            new SignupTwo(formno).setVisible(true);
 		        }
 
 		    } catch (Exception e) {
@@ -231,4 +232,3 @@ public static void main(String[] args) {
 	new SignupOne();
 }
 }
-

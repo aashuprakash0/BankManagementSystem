@@ -12,6 +12,7 @@ public class Login extends JFrame implements ActionListener {
 	JButton login,signup,clear;
 	JTextField cardTextField;
 	JPasswordField pinTextField ;
+	
 
     Login() {
         setTitle("AUTOMATED TELLER MACHINE");
@@ -23,7 +24,8 @@ public class Login extends JFrame implements ActionListener {
         JLabel label = new JLabel(i3);
         label.setBounds(70,10,100,100);
         add(label);
-        //i am writting label to welcome to ATM
+       
+        //To label  welcome to ATM
         JLabel text =new JLabel("Welcome to ATM"); 
         text.setFont(new Font("Osward",Font.BOLD,38));
         text.setBounds(200,40,400,40);
